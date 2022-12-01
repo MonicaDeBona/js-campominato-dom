@@ -32,14 +32,14 @@ button.addEventListener('click', function() {
         newDivSquare.addEventListener('click', function() {
             if (bombsArr.includes(i)) {
                 newDivSquare.classList.add('redBomb');
-                alert('YOU LOSE!');
+                scoreBoard.innerHTML = 'GAME OVER!' + ' ' + 'Your score: ' + score;
                 mainElement.innerHTML = ('');
             } else {
                 newDivSquare.classList.add('clicked');
                 score += 1;
                 scoreBoard.innerHTML = score;
                 if ( score === (100 - 16)) {
-                    alert('YOU WIN!');
+                    scoreBoard.innerHTML = 'YOU WIN!' + ' ' + 'Your score: ' + score;
                 }
             }
         });
