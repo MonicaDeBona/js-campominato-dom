@@ -33,7 +33,5 @@ div.redBomb {
 .score-board{
     border: 3px solid black;
     text-align: center;
-    color: red;
-    padding: 1rem 4rem;
     font-size: 2rem;
 }
