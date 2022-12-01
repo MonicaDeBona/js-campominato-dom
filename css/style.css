@@ -1,0 +1,27 @@
+header {
+    height: 10vh;
+}
+
+main {
+    background-color: #7fffd4;
+    height: 80vh;
+}
+
+footer {
+    height: 5vh;
+}
+
+div.parent {
+    height: 600px;
+    width: 600px;
+}
+
+div.square {
+    border: 1px solid black;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+div.square.clicked {
+    background-color: blue;
+}
