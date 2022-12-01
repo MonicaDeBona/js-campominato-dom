@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campo Minato Dom</title>
-    <!-- importing bootstrap v5.2 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campo Minato Dom</title>
+        <!-- importing bootstrap v5.2 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="container-fluid d-flex justify-content-between align-items-center">
+            <h1>
+                Campo Minato
+            </h1>
+            <div class="score-board text-center"></div>
+            <div class="button d-flex justify-content-end">
+                <a class="btn btn-secondary" href="#">
+                    Play
+                </a>
+            </div>
+        </header>
+        <main></main>
+        <footer class="container-fluid">
             <div class="row">
-                <div class="col-6">
-                    <h1>
-                        Campo Minato
-                    </h1>
-                </div>
-                <div class="col-6">
-                    <div class="button">
-                        <a class="btn btn-secondary" href="#">
-                            Play
-                        </a>
-                    </div>
+                <div class="col-12">
+                    <p>Made with &hearts; by <a href="#">Boolean</a></p>
                 </div>
             </div>
-        </div>
-    </header>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
+        </footer>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
 </html>

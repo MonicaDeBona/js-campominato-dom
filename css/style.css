@@ -4,7 +4,7 @@ header {
 
 main {
     background-color: #7fffd4;
-    height: 80vh;
+    height: 85vh;
 }
 
 footer {
@@ -24,4 +24,16 @@ div.square {
 
 div.square.clicked {
     background-color: blue;
+}
+
+div.redBomb {
+    background-color: red;
+}
+
+.score-board{
+    border: 3px solid black;
+    text-align: center;
+    color: red;
+    padding: 1rem 4rem;
+    font-size: 2rem;
 }

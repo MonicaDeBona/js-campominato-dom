@@ -1,5 +1,7 @@
 // Selezione btn da html
 const button = document.querySelector('div.button a.btn');
+const scoreBoard = document.querySelector('div.score-board');
+
 
 // Aggiungo evento dove al click sul btn appare la griglia
 button.addEventListener('click', function() {
@@ -13,6 +15,7 @@ button.addEventListener('click', function() {
     mainElement.append(newDivContainer);
 
     let score = 0;
+    scoreBoard.innerHTML = score;
     const bombsArr = [];
     while (bombsArr.length < 16) {
         let bombsNum = getRandomUniqueNumber (bombsArr, 1, 100);
@@ -34,6 +37,7 @@ button.addEventListener('click', function() {
             } else {
                 newDivSquare.classList.add('clicked');
                 score += 1;
+                scoreBoard.innerHTML = score;
                 if ( score === (100 - 16)) {
                     alert('YOU WIN!');
                 }
