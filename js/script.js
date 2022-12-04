@@ -15,6 +15,7 @@ button.addEventListener('click', function() {
     mainElement.append(newDivContainer);
 
     let score = 0;
+    let isGameOver = false;
     scoreBoard.innerHTML = score;
 
     const bombsArr = [];
@@ -30,17 +31,22 @@ button.addEventListener('click', function() {
         const newDivSquare = getNewElement('div', i, ['square', 'd-flex', 'justify-content-center', 'align-items-center']); 
 
         newDivSquare.addEventListener('click', function() {
-            if (bombsArr.includes(i)) {
-                newDivSquare.classList.add('redBomb');
-                scoreBoard.innerHTML = 'GAME OVER!' + ' ' + 'Your score: ' + score;
-                mainElement.innerHTML = ('');
-            } else {
-                newDivSquare.classList.add('clicked');
-                score += 1;
-                scoreBoard.innerHTML = score;
-                if ( score === (100 - 16)) {
-                    scoreBoard.innerHTML = 'YOU WIN!' + ' ' + 'Your score: ' + score;
+            if(!isGameOver) {
+                if (bombsArr.includes(i)) {
+                    newDivSquare.classList.add('redBomb');
+                    scoreBoard.innerHTML = 'GAME OVER!' + ' ' + 'Your score: ' + score;
+                    isGameOver = true;
+                } else {
+                    newDivSquare.classList.add('clicked');
+                    score += 1;
+                    scoreBoard.innerHTML = score;
+                    if ( score === (100 - 16)) {
+                        scoreBoard.innerHTML = 'YOU WIN!' + ' ' + 'Your score: ' + score;
+                        isGameOver = true;
+                    }
                 }
+            } else {
+                console.log('Hai perso! La partita è terminata');
             }
         });
         newDivContainer.append(newDivSquare);
